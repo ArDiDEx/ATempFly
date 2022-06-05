@@ -1,0 +1,10 @@
+name: aTempFly
+version: '${version}'
+main: fr.ardidex.atempfly.ATempFly
+api-version: 1.16
+authors: [ ardidex ]
+commands:
+  tf:
+    description: temp fly
+    aliases:
+      - tfly
