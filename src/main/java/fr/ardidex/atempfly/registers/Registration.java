@@ -13,11 +13,6 @@ import org.bukkit.plugin.PluginManager;
 
 public class Registration {
     public Registration() {
-        register();
-    }
-
-    @SuppressWarnings("ConstantConditions")
-    private void register() {
         PluginManager pm = Bukkit.getPluginManager();
         ATempFly instance = ATempFly.getInstance();
         if(instance.getFlyProvider().getClass().equals(FactionsProvider.class))

@@ -23,12 +23,15 @@ public class TimePlaceholder extends PlaceholderExpansion {
         return "1.0";
     }
 
+    /**
+     * %atempfly_remaining
+     */
     @Override
     public @Nullable String onPlaceholderRequest(Player player, @NotNull String params) {
         if(params.equalsIgnoreCase("remaining")){
             return ATempFly.getInstance().getTempFlyManager().parseTimeShort(ATempFly.getInstance().getTempFlyManager().getCacheRemaining(player));
         }
-        return "";
+        return "ERROR";
     }
 
     @Override
@@ -36,6 +39,6 @@ public class TimePlaceholder extends PlaceholderExpansion {
         if(params.equalsIgnoreCase("remaining")){
             return ATempFly.getInstance().getTempFlyManager().parseTimeShort(ATempFly.getInstance().getTempFlyManager().getCacheRemaining(player));
         }
-        return "";
+        return "ERROR";
     }
 }

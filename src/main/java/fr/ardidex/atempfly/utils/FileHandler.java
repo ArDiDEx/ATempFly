@@ -21,6 +21,7 @@ public class FileHandler {
         load();
     }
 
+    // https://www.spigotmc.org/wiki/config-files/
     @SuppressWarnings("ResultOfMethodCallIgnored")
     public void load(){
         file =new File(ATempFly.getInstance().getDataFolder(), fileName + ".yml");

@@ -1,7 +1,5 @@
 package fr.ardidex.atempfly.utils;
 
-import fr.ardidex.atempfly.ATempFly;
-
 import java.util.HashMap;
 import java.util.Set;
 

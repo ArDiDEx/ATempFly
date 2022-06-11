@@ -23,8 +23,7 @@ public class TempFlyCommand implements CommandExecutor {
             return true;
         }
         if(args.length > 0){
-            // /tf admin add pseudo amount
-            // /tf add pseudo amount <<<
+            // /tf add pseudo [amount]
             switch(args[0]){
                 case "add": {
                     List<OfflinePlayer> targets = new ArrayList<>();

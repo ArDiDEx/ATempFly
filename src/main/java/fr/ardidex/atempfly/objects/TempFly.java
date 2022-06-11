@@ -7,9 +7,9 @@ import java.util.UUID;
 
 public class TempFly {
 
-    public long remaining;
-    public long start;
-    public boolean disabled = false;
+    private long remaining;
+    private long start;
+    private boolean disabled = false;
     private final UUID uniqueId;
 
     public TempFly(long remaining, UUID uniqueId) {
@@ -24,6 +24,10 @@ public class TempFly {
 
     public void setRemaining(long remaining) {
         this.remaining = remaining;
+    }
+
+    public boolean isDisabled() {
+        return disabled;
     }
 
     public void setDisabled(boolean disabled) {

@@ -24,7 +24,7 @@ public class TempFlyManager {
                 fileHandler.save();
                 if(tempFlyPlayers.isEmpty())return;
                 tempFlyPlayers.forEach((uuid, tempFly) -> {
-                    if(tempFly.getRemaining() <= 0 || tempFly.disabled || !tempFly.getPlayer().getAllowFlight()){
+                    if(tempFly.getRemaining() <= 0 || tempFly.isDisabled() || !tempFly.getPlayer().getAllowFlight()){
                         new BukkitRunnable() {
                             @Override
                             public void run() {
