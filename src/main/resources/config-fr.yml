@@ -1,0 +1,27 @@
+#░█▀▀█  ▀▀█▀▀ ▒█▀▀▀ ▒█▀▄▀█ ▒█▀▀█ ▒█▀▀▀ ▒█░░░ ▒█░░▒█ 
+#▒█▄▄█  ░▒█░░ ▒█▀▀▀ ▒█▒█▒█ ▒█▄▄█ ▒█▀▀▀ ▒█░░░ ▒█▄▄▄█ 
+#▒█░▒█  ░▒█░░ ▒█▄▄▄ ▒█░░▒█ ▒█░░░ ▒█░░░ ▒█▄▄█ ░░▒█░░ 
+
+prefix: "&ea&6TempFly &e» &r"
+
+permission: "admin.atempfly"
+receive_message: "&6Vous avez reçu &e%time% &6de tempfly&f."
+lose_message: "&6Vous avez perdu &e%time% &6de tempfly&f."
+give_message: "&6Vous avez donné &e%time% &6de temp fly à &e%player%&f."
+take_message: "&6Vous avez pris &e%time% &6de temp fly à &e%player%&f."
+information_message: "§6%player% a encore §e%time%§6 de tempfly restant§f."
+no_permission: "&cVous n'avez pas l'autorisation&f."
+no_tempfly: "&cTu n'as plus de temps de vol&f."
+no_player: "&cErreur le joueur &6%player% &cn'existe pas&f."
+no_time: "&cErreur le temps spécifiée n'est pas valide&f."
+correct_usage: "&cUtilisation : /tf add/remove/get <pseudo> [temps]&f."
+enable: "&6Vous avez activé votre tempfly il vous reste &e%time% &6&f."
+disable: "&6Vous avez désactivé votre tempfly il vous reste &e%time%&f."
+expired: "&cVotre temps de vol a expiré&f."
+error_fly: "&cImpossible d'activer le fly dans cette zone&f."
+
+#Veuillez indiquer le temps au pluriel
+days: "jours"
+hours: "heures"
+minutes: "minutes"
+seconds: "secondes"

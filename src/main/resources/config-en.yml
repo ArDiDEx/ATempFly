@@ -1,0 +1,27 @@
+#░█▀▀█  ▀▀█▀▀ ▒█▀▀▀ ▒█▀▄▀█ ▒█▀▀█ ▒█▀▀▀ ▒█░░░ ▒█░░▒█ 
+#▒█▄▄█  ░▒█░░ ▒█▀▀▀ ▒█▒█▒█ ▒█▄▄█ ▒█▀▀▀ ▒█░░░ ▒█▄▄▄█ 
+#▒█░▒█  ░▒█░░ ▒█▄▄▄ ▒█░░▒█ ▒█░░░ ▒█░░░ ▒█▄▄█ ░░▒█░░ 
+
+prefix: "&ea&6TempFly &e» &r"
+
+permission: "admin.atempfly"
+receive_message: "&6You have received &e%time% &6of tempfly&f."
+lose_message: "&6You have lost &e%time% &6of tempfly&f."
+give_message: "&6You have given &e%time% &6of temp fly to &e%player%&f."
+take_message: "&6You have taken &e%time% &6of temp fly from &e%player%&f."
+information_message: "§6%player% has §e%time%§6 tempfly left§f."
+no_permission: "&cYou don't have permission&f."
+no_tempfly: "&cYou have no more time to fly&f."
+no_player: "&cError player &6%player% &cdoes not exist&f."
+no_time: "&cError time specified is invalid&f."
+correct_usage: "&cUsage: /tf add/remove/get <nickname> [time]&f."
+enable: "&6You have activated your tempfly you have &e%time% &6left&f."
+disable: "&6You have deactivated your tempfly you have &e%time% &6left&f."
+expired: "&cYour fly time has expired&f."
+error_fly: "&cImpossible to activate the fly in this area&f."
+
+#Please indicate the plural time
+days: "days"
+hours: "hours"
+minutes: "minutes"
+seconds: "seconds"
