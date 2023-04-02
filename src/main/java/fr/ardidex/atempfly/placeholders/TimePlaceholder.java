@@ -8,7 +8,7 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 public class TimePlaceholder extends PlaceholderExpansion {
-    final ATempFly plugin;
+    private final ATempFly plugin;
 
     public TimePlaceholder(ATempFly plugin) {
         this.plugin = plugin;

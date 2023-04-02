@@ -14,6 +14,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.UUID;
+import java.util.stream.Collectors;
 
 public class TempFlyManager {
     final ATempFly plugin;
@@ -58,7 +59,7 @@ public class TempFlyManager {
 
     public boolean enable(Player target) {
         if (isFlying(target)) return false;
-        long remaining = playersConfig.getConfig().getLong(target.getUniqueId() + ".remaining", -1);
+        long remaining = getTime(target);
         if (remaining <= 0) {
             return false;
         }
@@ -128,7 +129,7 @@ public class TempFlyManager {
     public void shutdown() {
         saveTask.cancel();
         flyTask.cancel();
-        for (UUID uuid : tempFlyPlayers.keySet().stream().toList()) {
+        for (UUID uuid : tempFlyPlayers.keySet().stream().collect(Collectors.toList())) {
             disable(Bukkit.getPlayer(uuid));
         }
         playersConfig.saveConfig();
