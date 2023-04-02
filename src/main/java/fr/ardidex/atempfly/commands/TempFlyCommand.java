@@ -18,6 +18,7 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -143,10 +144,11 @@ public class TempFlyCommand implements CommandExecutor, TabCompleter {
 
             return true;
         }
-        if(!(sender instanceof Player player)){
+        if(!(sender instanceof Player)){
             sender.sendMessage(plugin.getSettings().getLanguage().CORRECT_USAGE);
             return true;
         }
+        Player player = (Player)sender;
         long time = plugin.getTempFlyManager().getTime(player);
         if(plugin.getTempFlyManager().isFlying(player)){
             TempFlyPlayer flyPlayer = plugin.getTempFlyManager().disable(player);
@@ -170,14 +172,17 @@ public class TempFlyCommand implements CommandExecutor, TabCompleter {
     @Nullable
     @Override
     public List<String> onTabComplete(@NotNull CommandSender sender, @NotNull Command command, @NotNull String label, @NotNull String[] args) {
+        if(!sender.hasPermission(plugin.getSettings().getLanguage().PERMISSION))
+            return Collections.emptyList();
         if (args.length == 1) {
-            return StringUtil.copyPartialMatches(args[0], List.of("add", "remove", "get"), new ArrayList<>());
+            return StringUtil.copyPartialMatches(args[0], Arrays.asList("add", "remove", "get"), new ArrayList<>());
         } else if (args.length == 2) {
             List<String> players = Bukkit.getOnlinePlayers().stream().map(HumanEntity::getName).collect(Collectors.toList());
-            players.add("all");
+            if(args[0].equalsIgnoreCase("add") || args[0].equalsIgnoreCase("remove"))
+                players.add("all");
             return StringUtil.copyPartialMatches(args[1], players, new ArrayList<>());
         } else if (args.length == 3 && (args[0].equalsIgnoreCase("add") || args[0].equalsIgnoreCase("remove"))) {
-            return StringUtil.copyPartialMatches(args[2], List.of("<time>"), new ArrayList<>());
+            return StringUtil.copyPartialMatches(args[2], Arrays.asList("<time>"), new ArrayList<>());
         }
         return Collections.emptyList();
     }

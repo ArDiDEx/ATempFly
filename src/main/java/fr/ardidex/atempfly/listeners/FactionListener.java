@@ -17,7 +17,6 @@ public class FactionListener implements Listener {
     @EventHandler
     public void event(FPlayerStoppedFlying e){
         Player player = e.getfPlayer().getPlayer();
-        System.out.println("playedstopped");
         if(plugin.getTempFlyManager().isFlying(player)){
             // player is flying through ATempFly
             plugin.getTempFlyManager().disable(player);

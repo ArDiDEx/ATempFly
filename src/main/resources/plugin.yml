@@ -1,8 +1,7 @@
 name: ATempFly
 version: '${version}'
 main: fr.ardidex.atempfly.ATempFly
-api-version: 1.19
-softdepend: [ SuperiorSkyblock2, PlaceholderAPI ]
+softdepend: [ SuperiorSkyblock2, PlaceholderAPI, Factions]
 authors: [ ardidex ]
 description: a tempfly plugin
 commands:
